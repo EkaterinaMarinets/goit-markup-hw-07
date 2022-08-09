@@ -18,6 +18,11 @@
     visibility: hidden;
     pointer-events: none;
   }
+
+  &.is-hidden .modal {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3) rotate(1turn);
+  }
 }
 
 .modal {
@@ -33,11 +38,6 @@
   transform: translate(-50%, -50%) scale(1) rotate(0);
   opacity: 1;
   transition: transform 400ms ease-in-out 100ms, opacity 400ms ease-in-out 100ms;
-
-  .backdrop.is-hidden & {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.3) rotate(1turn);
-  }
 }
 
 .modal-form {
